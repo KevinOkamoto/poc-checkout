@@ -2,5 +2,248 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "fundamental-checkout": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/fundamental-checkout",
+      "sourceRoot": "projects/fundamental-checkout/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/fundamental-checkout",
+            "index": "projects/fundamental-checkout/src/index.html",
+            "main": "projects/fundamental-checkout/src/main.ts",
+            "polyfills": "projects/fundamental-checkout/src/polyfills.ts",
+            "tsConfig": "projects/fundamental-checkout/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/fundamental-checkout/src/favicon.ico",
+              "projects/fundamental-checkout/src/assets"
+            ],
+            "styles": [
+              "projects/fundamental-checkout/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/fundamental-checkout/src/environments/environment.ts",
+                  "with": "projects/fundamental-checkout/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "fundamental-checkout:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "fundamental-checkout:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "fundamental-checkout:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fundamental-checkout/src/test.ts",
+            "polyfills": "projects/fundamental-checkout/src/polyfills.ts",
+            "tsConfig": "projects/fundamental-checkout/tsconfig.spec.json",
+            "karmaConfig": "projects/fundamental-checkout/karma.conf.js",
+            "assets": [
+              "projects/fundamental-checkout/src/favicon.ico",
+              "projects/fundamental-checkout/src/assets"
+            ],
+            "styles": [
+              "projects/fundamental-checkout/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fundamental-checkout/tsconfig.app.json",
+              "projects/fundamental-checkout/tsconfig.spec.json",
+              "projects/fundamental-checkout/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/fundamental-checkout/e2e/protractor.conf.js",
+            "devServerTarget": "fundamental-checkout:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "fundamental-checkout:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "ui5-checkout": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ui5-checkout",
+      "sourceRoot": "projects/ui5-checkout/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ui5-checkout",
+            "index": "projects/ui5-checkout/src/index.html",
+            "main": "projects/ui5-checkout/src/main.ts",
+            "polyfills": "projects/ui5-checkout/src/polyfills.ts",
+            "tsConfig": "projects/ui5-checkout/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ui5-checkout/src/favicon.ico",
+              "projects/ui5-checkout/src/assets"
+            ],
+            "styles": [
+              "projects/ui5-checkout/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ui5-checkout/src/environments/environment.ts",
+                  "with": "projects/ui5-checkout/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ui5-checkout:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ui5-checkout:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ui5-checkout:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ui5-checkout/src/test.ts",
+            "polyfills": "projects/ui5-checkout/src/polyfills.ts",
+            "tsConfig": "projects/ui5-checkout/tsconfig.spec.json",
+            "karmaConfig": "projects/ui5-checkout/karma.conf.js",
+            "assets": [
+              "projects/ui5-checkout/src/favicon.ico",
+              "projects/ui5-checkout/src/assets"
+            ],
+            "styles": [
+              "projects/ui5-checkout/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ui5-checkout/tsconfig.app.json",
+              "projects/ui5-checkout/tsconfig.spec.json",
+              "projects/ui5-checkout/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ui5-checkout/e2e/protractor.conf.js",
+            "devServerTarget": "ui5-checkout:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ui5-checkout:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "fundamental-checkout"
 }

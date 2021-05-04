@@ -6,5 +6,18 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/fundamental-checkout/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/fundamental-checkout/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ui5-checkout/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ui5-checkout/tsconfig.spec.json"
+    }
+]
 }
