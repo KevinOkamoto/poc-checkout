@@ -23,8 +23,11 @@ export interface Requisition {
   billingAddress: Address;
 }
 
-export interface LineItems {
-  id: string;
+export interface LineItem {
+  lineItemNumber: string;
   name: string;
-  supplier: string;
+  supplier: Supplier;
+  price: number;
+  quantity: number;
+  totalNetAmount: number;
 }

@@ -53,7 +53,7 @@
             </fdp-radio-group>
           </fdp-form-field>
         </fdp-form-group>
-      <fdp-table [dataSource]="[]" role="" contentDensity="compact" emptyTableMessage="No data found"
+      <fdp-table [dataSource]="lineItems$ | async" role="" contentDensity="compact" emptyTableMessage="No data found"
         i18n-emptyTableMessage>
 
         <fdp-table-toolbar role="" title="Items" i18n-title [hideItemCount]="false">
@@ -61,63 +61,37 @@
 
         <fdp-column name="lineNumber" key="line" label="Line" role="" align="center">
           <fdp-table-cell role="" *fdpCellDef="let item">
-            {{ item.itemNumber }}
+            {{item.lineItemNumber}}
           </fdp-table-cell>
         </fdp-column>
 
         <fdp-column name="name" role="" key="itemShortText" label="Name" i18n-label>
           <fdp-table-cell role="" *fdpCellDef="let item">
-            <div role="" class="checkout-item-name">
-              <span role="">
-                <fd-avatar role="" [image]="item.imageUrl" size="s"></fd-avatar>
-              </span>
-              <span role="" *ngIf="!isFGItem(item)">{{item.itemShortText}}</span>
-              <span *ngIf="isFGItem(item)">
-                <a fd-link role=""
-                  [attr.aria-label]="'Fg Line item'+item.itemNumber+' product name is '+item.itemShortText "
-                  class="line-item-name">{{item.itemShortText}}</a>
-              </span>
-            </div>
+            {{item.name}}
           </fdp-table-cell>
         </fdp-column>
 
         <fdp-column name="supplier" key="supplier" label="Supplier" role="" i18n-label>
-          <fdp-table-cell tabindex="0" role=""
-            [attr.aria-label]="'Line item '+item.itemNumber+'s supplier name is '+getSupplier(item)"
-            *fdpCellDef="let item">
-            {{ getSupplier(item) }}
+          <fdp-table-cell tabindex="0" role="" *fdpCellDef="let item">
+            {{item.supplier.name}}
           </fdp-table-cell>
         </fdp-column>
 
         <fdp-column name="pricePerItem" key="price" role="" label="Price per item" i18n-label align="end">
-          <fdp-table-cell role="" tabindex="0"
-            [attr.aria-label]="'Price per item for Line number '+item.itemNumber+' is '+item.price +''+item.currency"
-            *fdpCellDef="let item">
-            {{item.price | currency:item.currency:'' }} {{item.currency}}
+          <fdp-table-cell role="" tabindex="0" *fdpCellDef="let item">
+            {{item.price}}
           </fdp-table-cell>
         </fdp-column>
 
         <fdp-column name="quantity" key="quantity" label="Quantity" role="" i18n-label align="start">
           <fdp-table-cell role="" *fdpCellDef="let item">
-            <span role="" class="quantity-cell">
-              <ng-container role="" *ngIf="!isSubmitted">
-                <fd-step-input role="" tabindex="0"
-                  [attr.aria-label]="'Quantity for Line number'+item.itemNumber+' is '+item.quantity+' with unit of measure '+item.unitOfMeasure"
-                  [min]="item.minOrderQty" [value]="item.quantity" (valueChange)="onQuantityChange(item,$event)"
-                  [disabled]="isFGItem(item)"></fd-step-input>
-                <div role="" class="line-item__uom">{{item.unitOfMeasure}}</div>
-              </ng-container>
-              <span role="" [attr.aria-label]="'Quantity is '+item.quantity" *ngIf="isSubmitted">{{item.quantity}}
-                {{item.unitOfMeasure}}</span>
-            </span>
+            {{item.quantity}}
           </fdp-table-cell>
         </fdp-column>
 
         <fdp-column name="price" key="totalNetAmount" label="Net amount" role="" i18n-label align="end">
-          <fdp-table-cell role="" tabindex="0"
-            [attr.aria-label]="'Net Amount for Line number '+item.itemNumber+' is '+item.totalNetAmount+' '+ item.currency"
-            *fdpCellDef="let item">
-            {{item.totalNetAmount | currency:item.currency:''}} {{item.currency}}
+          <fdp-table-cell role="" tabindex="0" *fdpCellDef="let item">
+            {{item.totalNetAmount}}
           </fdp-table-cell>
         </fdp-column>
 

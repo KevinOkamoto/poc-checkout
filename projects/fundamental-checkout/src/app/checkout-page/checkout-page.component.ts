@@ -2,7 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { CheckoutService } from '../checkout.service';
-import { Address, Requisition, Supplier } from '../models';
+import {
+  Address,
+  LineItem,
+  Requisition,
+  Supplier
+} from '../models';
 
 @Component({
   selector: 'app-checkout-page',
@@ -16,6 +21,7 @@ export class CheckoutPageComponent implements OnInit {
   requisition$: Observable<Requisition>;
   addresses$: Observable<Address[]>;
   suppliers$: Observable<Supplier[]>;
+  lineItems$: Observable<LineItem[]>;
 
   constructor(private service: CheckoutService) {
   }
@@ -27,6 +33,7 @@ export class CheckoutPageComponent implements OnInit {
     this.requisition$ = this.service.getRequisition();
     this.addresses$ = this.service.getAddresses();
     this.suppliers$ = this.service.getSuppliers();
+    this.lineItems$ = this.service.getLineItems();
 
   }
 
