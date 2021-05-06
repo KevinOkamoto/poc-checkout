@@ -9,7 +9,8 @@ import '@ui5/webcomponents/dist/Label';
 import '@ui5/webcomponents-fiori/dist/Page';
 import '@ui5/webcomponents-fiori/dist/Bar';
 
-
+import '@ui5/webcomponents-icons/dist/action-settings.js';
+import '@ui5/webcomponents-icons/dist/home.js';
 
 @NgModule({
   declarations: [
