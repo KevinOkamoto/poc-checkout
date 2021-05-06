@@ -22,7 +22,8 @@ import {
   PlatformInputModule,
   PlatformRadioGroupModule,
   PlatformSelectModule,
-  PlatformTableModule
+  PlatformTableModule,
+  PlatformTextAreaModule
 } from '@fundamental-ngx/platform';
 import { CheckoutPageComponent } from './checkout-page.component';
 
@@ -45,6 +46,7 @@ import { CheckoutPageComponent } from './checkout-page.component';
     PlatformRadioGroupModule,
     PlatformSelectModule,
     PlatformTableModule,
+    PlatformTextAreaModule,
     StepInputModule,
   ],
   exports: [
