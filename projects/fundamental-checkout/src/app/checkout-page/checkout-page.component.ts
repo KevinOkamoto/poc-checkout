@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { CheckoutService } from '../checkout.service';
-import { Address, Requisition } from '../models';
+import { Address, Requisition, Supplier } from '../models';
 
 @Component({
   selector: 'app-checkout-page',
@@ -15,6 +15,7 @@ export class CheckoutPageComponent implements OnInit {
   formGroup2: FormGroup;
   requisition$: Observable<Requisition>;
   addresses$: Observable<Address[]>;
+  suppliers$: Observable<Supplier[]>;
 
   constructor(private service: CheckoutService) {
   }
@@ -25,6 +26,7 @@ export class CheckoutPageComponent implements OnInit {
 
     this.requisition$ = this.service.getRequisition();
     this.addresses$ = this.service.getAddresses();
+    this.suppliers$ = this.service.getSuppliers();
 
   }
 

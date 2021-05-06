@@ -26,7 +26,7 @@
             <fdp-combobox name="billingAddress" [value]="requisition.billingAddress.address" [displayKey]="'address'" [lookupKey]="'address'" [dataSource]="addresses$"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #supplierField label="Supplier" id="supplier" column="1" rank="5">
-            <fdp-combobox name="supplier" [dataSource]="[]" displayKey="shortDescription"></fdp-combobox>
+            <fdp-combobox name="supplier" [dataSource]="suppliers$" [displayKey]="'name'" [lookupKey]="'name'"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #dueDateField label="Due Date" id="dueDate" column="2" rank="6">
             <fdp-date-picker name="dueDate" type="single"> </fdp-date-picker>
