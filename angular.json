@@ -25,7 +25,12 @@
             "aot": true,
             "assets": [
               "projects/fundamental-checkout/src/favicon.ico",
-              "projects/fundamental-checkout/src/assets"
+              "projects/fundamental-checkout/src/assets",
+              {
+                "glob": "*.json",
+                "input": "data/",
+                "output": "assets"
+              }
             ],
             "styles": [
               "projects/fundamental-checkout/src/styles.scss"
