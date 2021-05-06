@@ -1,8 +1,13 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import {AppComponent} from './app.component';
-import {CheckoutModule} from './checkout-page/checkout-page.module';
+import { AppComponent } from './app.component';
+import { CheckoutModule } from './checkout-page/checkout-page.module';
+import {
+  RtlService,
+  ShellbarModule,
+} from '@fundamental-ngx/core';
+import { CheckoutService } from './checkout.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +15,13 @@ import {CheckoutModule} from './checkout-page/checkout-page.module';
   ],
   imports: [
     BrowserModule,
-    CheckoutModule
+    CheckoutModule,
+    ShellbarModule,
   ],
-  providers: [],
+  providers: [
+    RtlService,
+    CheckoutService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

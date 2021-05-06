@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { CheckoutService } from '../checkout.service';
+import { Requisition } from '../models';
 
 @Component({
   selector: 'app-checkout-page',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutPageComponent implements OnInit {
 
-  constructor() { }
+  formGroup: FormGroup;
+  requisition$: Observable<Requisition>;
+
+  constructor(private service: CheckoutService) {
+  }
 
   ngOnInit(): void {
+    this.formGroup = new FormGroup({});
+    this.requisition$ = this.service.getRequisition();
   }
 
 }
