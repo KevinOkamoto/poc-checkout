@@ -5,6 +5,7 @@ import {
 import { Observable, of } from 'rxjs';
 import {
   Address,
+  LineItem,
   Requisition,
   Supplier
 } from './models';
@@ -42,6 +43,10 @@ export class CheckoutService {
 
   getSuppliers(): Observable<Supplier[]> {
     return this.http.get<Supplier[]>('/assets/suppliers.json');
+  }
+
+  getLineItems(): Observable<LineItem[]> {
+    return this.http.get<LineItem[]>('/assets/line-items-short.json');
   }
 
 }
