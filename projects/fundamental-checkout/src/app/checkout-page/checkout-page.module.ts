@@ -26,6 +26,7 @@ import {
   PlatformTextAreaModule
 } from '@fundamental-ngx/platform';
 import { CheckoutPageComponent } from './checkout-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { CheckoutPageComponent } from './checkout-page.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     FdpFormGroupModule,
     LayoutPanelModule,
     PlatformButtonModule,
