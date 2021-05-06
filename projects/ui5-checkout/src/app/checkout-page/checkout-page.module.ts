@@ -8,6 +8,8 @@ import '@ui5/webcomponents/dist/Label';
 import '@ui5/webcomponents/dist/Input';
 import '@ui5/webcomponents/dist/ComboBox';
 import '@ui5/webcomponents/dist/DatePicker';
+import '@ui5/webcomponents/dist/Select';
+import '@ui5/webcomponents/dist/Option';
 
 import '@ui5/webcomponents-fiori/dist/Page';
 import '@ui5/webcomponents-fiori/dist/Bar';

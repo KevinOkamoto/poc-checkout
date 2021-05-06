@@ -28,32 +28,27 @@
       </ng-container>
 
 
-<!--      <ui5-label for="supplier">Supplier:</ui5-label>-->
-<!--      <ui5-combobox id="supplier" placeholder="Supplier" filter="Contains">-->
-<!--        <ui5-cb-item text="Austria"></ui5-cb-item>-->
-<!--        <ui5-cb-item text="Bulgaria"></ui5-cb-item>-->
-<!--        <ui5-cb-item text="Germany"></ui5-cb-item>-->
-<!--        <ui5-cb-item text="United Kingdom"></ui5-cb-item>-->
-<!--        <ui5-cb-item text="Kazakhstan"></ui5-cb-item>-->
-<!--      </ui5-combobox>-->
-
-      <ui5-label for="dueOn">Due On:</ui5-label>
-      <ui5-date-picker id="dueOn"></ui5-date-picker>
+      <ng-container *ngTemplateOutlet="date; context: {$implicit: requisition, field:'dueOn', title: 'Due On'}">
+      </ng-container>
     </section>
 
     <section class="form-column ">
+      <ng-container *ngTemplateOutlet="select; context: {$implicit: requisition, field:'currency', title: 'Currency',
+      dataSource: ['USD', 'CZK', 'EUR']}">
+      </ng-container>
 
-      <ui5-label for="username" required>Username:</ui5-label>
-      <ui5-input id="username"></ui5-input>
 
-      <ui5-label for="password" required>Password:</ui5-label>
-      <ui5-input id="password" type="Password"></ui5-input>
+      <ng-container *ngTemplateOutlet="combobox; context: {$implicit: requisition, field:'requester',
+      title: 'Requester', dataSource: userDB  }">
+      </ng-container>
 
-      <ui5-label for="email" type="Email" required>Email:</ui5-label>
-      <ui5-input id="email"></ui5-input>
 
-      <ui5-label for="address">Address:</ui5-label>
-      <ui5-input id="address"></ui5-input>
+>>>>>
+      <ng-container *ngTemplateOutlet="combobox; context: {$implicit: requisition, field:'commodityCode',
+      title: 'Commodity Code', dataSource: commodityCodeDB  }">
+      </ng-container>
+
+<<<<<<s
 
 
     </section>
@@ -78,11 +73,32 @@
 </ng-template>
 
 
+<ng-template #select let-entity let-field="field" let-title="title" let-ds="dataSource">
+  <ui5-label [for]="field" required>{{title}}:</ui5-label>
+  <ui5-select #select class="select" [value]="entity[field]" [id]="field"
+              (change)="entity[field]  = select.selectedOption.innerText">
+    <ui5-option *ngFor="let item of ds" [selected]="item === entity[field]">{{item}}</ui5-option>
+  </ui5-select>
+
+
+</ng-template>
+
+
+<ng-template #date let-entity let-field="field" let-title="title">
+  <ui5-label [for]="field">{{title}}:</ui5-label>
+  <ui5-date-picker #date [id]="field" format-pattern="dd/MM/yyyy"
+                   [value]="entity[field] | date:'dd/MM/yyyy'"
+                   (change)="entity[field]  = date.dateValue"
+  ></ui5-date-picker>
+
+</ng-template>
+
+
 <ng-template #combobox let-entity let-field="field" let-title="title" let-ds="dataSource">
-  <ng-template [ngIf]="ds">
+  <ng-template [ngIf]="ds && ds.length > 0">
     <ui5-label [for]="field" required>{{title}}:</ui5-label>
-    <ui5-combobox #combo [id]="field" filter="StartsWith"
-                  [value]="entity[field].name"
+    <ui5-combobox #combo [id]="field" filter="Contains"
+                  [value]="entity[field]?.name"
                   (change)="onCBSelection(field, combo.value)">
       <ui5-cb-item *ngFor="let item of ds" [text]="item.name"></ui5-cb-item>
     </ui5-combobox>

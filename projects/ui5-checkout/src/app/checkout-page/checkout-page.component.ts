@@ -1,17 +1,20 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
-import {Address, Requisition, Supplier} from '../model/models';
+import {Address, CommodityCode, Requisition, Supplier, User} from '../model/models';
 
 @Component({
   selector: 'app-checkout-page',
   templateUrl: './checkout-page.component.html',
-  styleUrls: ['./checkout-page.component.scss']
+  styleUrls: ['./checkout-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CheckoutPageComponent implements OnInit {
+export class CheckoutPageComponent implements OnInit, AfterViewInit {
   requisition: Requisition;
   addressDB: Array<Address>;
   supplierDB: Array<Supplier>;
+  userDB: Array<User>;
+  commodityCodeDB: Array<CommodityCode>;
 
 
   constructor(private http: HttpClient, private cd: ChangeDetectorRef) {
@@ -20,8 +23,13 @@ export class CheckoutPageComponent implements OnInit {
   ngOnInit(): void {
     this.addressDB = [];
     this.supplierDB = [];
+    this.userDB = [];
+    this.commodityCodeDB = [];
+
     this._loadAddresses();
     this._loadSuppliers();
+    this._loadUsers();
+    this._loadCC();
 
     const address: Address = {
       zip: '7221',
@@ -42,9 +50,16 @@ export class CheckoutPageComponent implements OnInit {
       billingAddress: address,
       shippingAddress: address,
       supplier: supp,
-      dueOn: new Date(2021, 6, 23)
+      dueOn: new Date(2021, 12, 12),
+      currency: 'CZK',
+      requester: null
     };
   }
+
+  ngAfterViewInit(): void {
+    this.cd.detectChanges();
+  }
+
 
   private _loadAddresses(): void {
     this.http.get<Address[]>('./assets/addresses.json').pipe(
@@ -75,13 +90,27 @@ export class CheckoutPageComponent implements OnInit {
     });
   }
 
+  private _loadUsers(): void {
+    this.http.get<User[]>('./assets/users.json').subscribe((items) => {
+      items.forEach((i) => this.userDB.push(i));
+      this.cd.detectChanges();
+    });
+  }
+
+  private _loadCC(): void {
+    this.http.get<CommodityCode[]>('./assets/cc.json').subscribe((items) => {
+      items.forEach((i) => this.commodityCodeDB.push(i));
+      this.cd.detectChanges();
+    });
+  }
+
   onCBSelection(field: string, $event: any): void {
-    if (field === 'address') {
+    if (field.includes('Address')) {
       this.requisition[field] = this.addressDB.filter((address) => address.name === $event)[0];
     } else if (field === 'supplier') {
       this.requisition[field] = this.supplierDB.filter((supplier) => supplier.name === $event)[0];
+    } else if (field === 'requester') {
+      this.requisition[field] = this.userDB.filter((supplier) => supplier.name === $event)[0];
     }
-
-
   }
 }
