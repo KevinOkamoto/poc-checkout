@@ -1,5 +1,9 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CheckoutModule } from './checkout-page/checkout-page.module';
@@ -13,7 +17,8 @@ import {
   PlatformInputModule,
   PlatformTableModule
 } from '@fundamental-ngx/platform';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { CheckoutService } from './checkout.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StepInputModule
   ],
   providers: [
-    RtlService
+    RtlService,
+    CheckoutService
   ],
   bootstrap: [AppComponent]
 })

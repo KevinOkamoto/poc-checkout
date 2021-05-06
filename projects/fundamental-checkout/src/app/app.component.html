@@ -6,11 +6,11 @@
   <fd-shellbar-actions [closePopoverOnSelect]="true"></fd-shellbar-actions>
 </fd-shellbar>
 
-<div>
+<div *ngIf="(requisition$ | async) as requisition">
   <form #myForm="ngForm">
     <fdp-form-group [formGroup]="formGroup">
       <fdp-form-field #titleField label="Title" id="title" rank="1" placeholder="Enter title">
-        <fdp-input name="title" type="text"> </fdp-input>
+        <fdp-input name="title" type="text" [value]="requisition.title"> </fdp-input>
       </fdp-form-field>
       <fdp-form-field #subTitleField label="Subtitle" id="subtitle" rank="2" placeholder="Enter subtitle">
         <fdp-input name="subtitle" type="text"> </fdp-input>
