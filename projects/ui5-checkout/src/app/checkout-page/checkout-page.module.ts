@@ -16,7 +16,15 @@ import '@ui5/webcomponents-fiori/dist/Bar';
 
 import '@ui5/webcomponents-icons/dist/action-settings.js';
 import '@ui5/webcomponents-icons/dist/home.js';
+import '@ui5/webcomponents-icons/dist/search.js';
+
 import {HttpClientModule} from '@angular/common/http';
+
+
+import '@ui5/webcomponents/dist/Table';
+import '@ui5/webcomponents/dist/TableColumn';
+import '@ui5/webcomponents/dist/TableRow';
+import '@ui5/webcomponents/dist/TableCell';
 
 @NgModule({
   declarations: [

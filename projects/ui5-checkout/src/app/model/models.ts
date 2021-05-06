@@ -9,6 +9,7 @@ export interface Requisition {
   currency?: string;
   requester?: User;
   commodityCode?: CommodityCode;
+  lineItems: Array<LineItem>;
 }
 
 
@@ -18,6 +19,16 @@ export interface Address {
   city: string;
   zip: string;
   country: string;
+}
+
+
+export interface LineItem {
+  id: string;
+  name: string;
+  supplier: string;
+  quantity: string;
+  unitPrice: string;
+  totalPrice: string;
 }
 
 

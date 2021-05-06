@@ -16,3 +16,25 @@
     }
   }
 }
+
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: fit-content;
+  padding: 0.5rem;
+}
+
+
+.table-wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  ui5-input {
+    float: right;
+  }
+}

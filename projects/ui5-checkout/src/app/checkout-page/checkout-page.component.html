@@ -7,8 +7,6 @@
     </ui5-bar>
   </div>
   <div class="header-form">
-    {{requisition | json}}
-
     <section class="form-column">
 
       <ng-container *ngTemplateOutlet="input; context: {$implicit: requisition, field:'title', title: 'Title'}">
@@ -31,7 +29,6 @@
       <ng-container *ngTemplateOutlet="date; context: {$implicit: requisition, field:'dueOn', title: 'Due On'}">
       </ng-container>
     </section>
-
     <section class="form-column ">
       <ng-container *ngTemplateOutlet="select; context: {$implicit: requisition, field:'currency', title: 'Currency',
       dataSource: ['USD', 'CZK', 'EUR']}">
@@ -43,16 +40,18 @@
       </ng-container>
 
 
->>>>>
       <ng-container *ngTemplateOutlet="combobox; context: {$implicit: requisition, field:'commodityCode',
       title: 'Commodity Code', dataSource: commodityCodeDB  }">
       </ng-container>
-
-<<<<<<s
-
-
     </section>
+
   </div>
+
+  <ng-container *ngTemplateOutlet="table; context: {$implicit: requisition, field:'lineItems',
+      title: 'Line Items', dataSource: lineItems$  }">
+  </ng-container>
+
+
   <div slot="footer">
     <ui5-bar design="FloatingFooter">
       <ui5-button design="Positive" slot="endContent">Agree</ui5-button>
@@ -106,3 +105,68 @@
 </ng-template>
 
 
+<ng-template #table let-entity let-field="field" let-title="title" let-ds="dataSource">
+
+  <div class="table-wrapper">
+    <ui5-label for="lineItems" required>{{title}}:</ui5-label>
+    <div class="header">
+      <ui5-input id="searchInput" placeholder="Enter search criteria ..." style="width: 120px">
+        <ui5-icon id="searchIcon" slot="icon" name="search"></ui5-icon>
+      </ui5-input>
+    </div>
+
+    <ui5-table class="demo-table" id="table" no-data-text="No Data">
+      <ui5-table-column slot="columns" style="width: 12rem">
+        <span style="line-height: 1.4rem">Line #:</span>
+      </ui5-table-column>
+
+      <ui5-table-column slot="columns" min-width="800" popin-text="Supplier">
+        <span style="line-height: 1.4rem">Name:</span>
+      </ui5-table-column>
+
+      <ui5-table-column slot="columns" min-width="600" popin-text="Dimensions" demand-popin>
+        <span style="line-height: 1.4rem">Supplier:</span>
+      </ui5-table-column>
+
+      <ui5-table-column slot="columns" min-width="600" popin-text="Weight" demand-popin>
+        <span style="line-height: 1.4rem">Unit Price:</span>
+      </ui5-table-column>
+      e
+      <ui5-table-column slot="columns">
+        <span style="line-height: 1.4rem">Quantity:</span>
+      </ui5-table-column>
+
+      <ui5-table-column slot="columns">
+        <span style="line-height: 1.4rem">Net Amount:</span>
+      </ui5-table-column>
+
+
+      <ui5-table-row *ngFor="let item of ds | async">
+        <ui5-table-column slot="columns" style="width: 12rem">
+          <span style="line-height: 1.4rem">{{item.id}}</span>
+        </ui5-table-column>
+
+        <ui5-table-column slot="columns" min-width="800" popin-text="Supplier">
+          <span style="line-height: 1.4rem">{{item.name}}</span>
+        </ui5-table-column>
+
+        <ui5-table-column slot="columns" min-width="600" popin-text="Dimensions" demand-popin>
+          <span style="line-height: 1.4rem">{{item.supplier}}</span>
+        </ui5-table-column>
+
+        <ui5-table-column slot="columns" min-width="600" popin-text="Weight" demand-popin>
+          <span style="line-height: 1.4rem">{{item.unitPrice}}</span>
+        </ui5-table-column>
+
+        <ui5-table-column slot="columns">
+          <span style="line-height: 1.4rem">{{item.quantity}}</span>
+        </ui5-table-column>
+
+        <ui5-table-column slot="columns">
+          <span style="line-height: 1.4rem">{{item.totalPrice}}</span>
+        </ui5-table-column>
+      </ui5-table-row>
+    </ui5-table>
+  </div>
+
+</ng-template>

@@ -1,7 +1,8 @@
 import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
-import {Address, CommodityCode, Requisition, Supplier, User} from '../model/models';
+import {Address, CommodityCode, LineItem, Requisition, Supplier, User} from '../model/models';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-checkout-page',
@@ -15,6 +16,7 @@ export class CheckoutPageComponent implements OnInit, AfterViewInit {
   supplierDB: Array<Supplier>;
   userDB: Array<User>;
   commodityCodeDB: Array<CommodityCode>;
+  lineItems$: Observable<LineItem[]>;
 
 
   constructor(private http: HttpClient, private cd: ChangeDetectorRef) {
@@ -29,6 +31,7 @@ export class CheckoutPageComponent implements OnInit, AfterViewInit {
     this._loadAddresses();
     this._loadSuppliers();
     this._loadUsers();
+    this._loadCC();
     this._loadCC();
 
     const address: Address = {
@@ -52,7 +55,8 @@ export class CheckoutPageComponent implements OnInit, AfterViewInit {
       supplier: supp,
       dueOn: new Date(2021, 12, 12),
       currency: 'CZK',
-      requester: null
+      requester: null,
+      lineItems: []
     };
   }
 
@@ -102,6 +106,15 @@ export class CheckoutPageComponent implements OnInit, AfterViewInit {
       items.forEach((i) => this.commodityCodeDB.push(i));
       this.cd.detectChanges();
     });
+  }
+
+  private _loadLineItems(): void {
+    this.lineItems$ = this.http.get<LineItem[]>('./assets/lineItems.json');
+
+    //   .subscribe((items) => {
+    //   items.forEach((i) => this.commodityCodeDB.push(i));
+    //   this.cd.detectChanges();
+    // });
   }
 
   onCBSelection(field: string, $event: any): void {
