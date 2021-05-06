@@ -1,0 +1,18 @@
+.header-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 40px;
+
+  .form-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+    ui5-input, ui5-combobox {
+      margin-bottom: 10px;
+    }
+  }
+}
