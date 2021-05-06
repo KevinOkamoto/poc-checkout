@@ -1,3 +1,10 @@
+export interface Address {
+  address: string;
+  city: string;
+  zip: string;
+  country: string;
+}
+
 export interface Requisition {
   id: string;
   title: string;
