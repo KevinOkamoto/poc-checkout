@@ -16,7 +16,12 @@ import {
 import {
   FdpFormGroupModule,
   PlatformButtonModule,
+  PlatformComboboxModule,
+  PlatformDatePickerModule,
+  PlatformInputGroupModule,
   PlatformInputModule,
+  PlatformRadioGroupModule,
+  PlatformSelectModule,
   PlatformTableModule
 } from '@fundamental-ngx/platform';
 import { CheckoutPageComponent } from './checkout-page.component';
@@ -33,7 +38,12 @@ import { CheckoutPageComponent } from './checkout-page.component';
     FdpFormGroupModule,
     LayoutPanelModule,
     PlatformButtonModule,
+    PlatformComboboxModule,
+    PlatformDatePickerModule,
+    PlatformInputGroupModule,
     PlatformInputModule,
+    PlatformRadioGroupModule,
+    PlatformSelectModule,
     PlatformTableModule,
     StepInputModule,
   ],

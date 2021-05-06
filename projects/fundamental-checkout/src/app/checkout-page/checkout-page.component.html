@@ -20,25 +20,37 @@
             <fdp-input name="subtitle" type="text"> </fdp-input>
           </fdp-form-field>
           <fdp-form-field #shippingAddressField label="Shipping Address" id="shippingAddress" column="1" rank="3">
-            <fdp-input name="shippingAddress" type="text"> </fdp-input>
+            <fdp-combobox name="shippingAddress" [dataSource]="[]" displayKey="shortDescription"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #billingAddressField label="Billing Address" id="billingAddress" column="1" rank="4">
-            <fdp-input name="billingAddress" type="text"> </fdp-input>
+            <fdp-combobox name="billingAddress" [dataSource]="[]" displayKey="shortDescription"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #supplierField label="Supplier" id="supplier" column="1" rank="5">
-            <fdp-input name="supplier" type="text"> </fdp-input>
+            <fdp-combobox name="supplier" [dataSource]="[]" displayKey="shortDescription"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #dueDateField label="Due Date" id="dueDate" column="2" rank="6">
-            <fdp-input name="dueDate" type="text"> </fdp-input>
+            <fdp-date-picker name="dueDate" type="single"> </fdp-date-picker>
           </fdp-form-field>
           <fdp-form-field #currencyField label="Currency" id="currency" column="2" rank="7">
-            <fdp-input name="currency" type="text"> </fdp-input>
+            <fdp-select name="currency" [list]="[]"> </fdp-select>
           </fdp-form-field>
           <fdp-form-field #requesterField label="Requester" id="requester" column="2" rank="8">
-            <fdp-input name="requester" type="text"> </fdp-input>
+            <fdp-input-group name="requester">
+              <fdp-input-group-input tyoe="text"></fdp-input-group-input>
+              <fdp-input-group-addon><fdp-button glyph="value-help"></fdp-button></fdp-input-group-addon>
+            </fdp-input-group>
           </fdp-form-field>
           <fdp-form-field #commodityCodeField label="Commodity Code" id="commodityCode" column="2" rank="9">
-            <fdp-input name="commodityCode" type="text"> </fdp-input>
+            <fdp-input-group name="commodityCode">
+              <fdp-input-group-input tyoe="text"></fdp-input-group-input>
+              <fdp-input-group-addon><fdp-button glyph="value-help"></fdp-button></fdp-input-group-addon>
+            </fdp-input-group>
+          </fdp-form-field>
+          <fdp-form-field #deliveryTypeField label="Delivery Type" id="deliveryType" column="2" rank="10">
+            <fdp-radio-group name="deliveryType" isInline="true">
+              <fdp-radio-button value="over night">Over Night</fdp-radio-button>
+              <fdp-radio-button value="express">Express</fdp-radio-button>
+            </fdp-radio-group>
           </fdp-form-field>
         </fdp-form-group>
       </form>
