@@ -19,4 +19,6 @@ export interface Address {
 
 export interface Supplier {
   name: string;
+  email: string;
+  orgNumber: string;
 }

@@ -1,6 +1,5 @@
 <ui5-page id="page" background-design="List" floating-footer show-footer>
   <div slot="header">
-    <h1>asdfsfd</h1>
     <ui5-bar design="Header">
       <ui5-label slot="middleContent">Checkout Page</ui5-label>
       <ui5-button design="Default" slot="endContent">Submit</ui5-button>
@@ -8,43 +7,35 @@
     </ui5-bar>
   </div>
   <div class="header-form">
-    <section class="form-column ">
+    {{requisition | json}}
+
+    <section class="form-column">
 
       <ng-container *ngTemplateOutlet="input; context: {$implicit: requisition, field:'title', title: 'Title'}">
       </ng-container>
 
       <ng-container *ngTemplateOutlet="combobox; context: {$implicit: requisition, field:'shippingAddress',
-      title: 'Shipping Address'}">
+      title: 'Shipping Address', dataSource: addressDB }">
       </ng-container>
 
 
-      <ui5-label for="shippingAddress">Shipping Address:</ui5-label>
-      <ui5-combobox id="shippingAddress" placeholder="Shipping Address" filter="Contains">
-        <ui5-cb-item text="Austria"></ui5-cb-item>
-        <ui5-cb-item text="Bulgaria"></ui5-cb-item>
-        <ui5-cb-item text="Germany"></ui5-cb-item>
-        <ui5-cb-item text="United Kingdom"></ui5-cb-item>
-        <ui5-cb-item text="Kazakhstan"></ui5-cb-item>
-      </ui5-combobox>
+      <ng-container *ngTemplateOutlet="combobox; context: {$implicit: requisition, field:'billingAddress',
+      title: 'Billing Addresss', dataSource: addressDB }">
+      </ng-container>
+
+      <ng-container *ngTemplateOutlet="combobox; context: {$implicit: requisition, field:'supplier',
+      title: 'Supplier', dataSource: supplierDB }">
+      </ng-container>
 
 
-      <ui5-label for="billingAddress">Billing Address:</ui5-label>
-      <ui5-combobox id="billingAddress" placeholder="Billing Address" filter="Contains">
-        <ui5-cb-item text="Austria"></ui5-cb-item>
-        <ui5-cb-item text="Bulgaria"></ui5-cb-item>
-        <ui5-cb-item text="Germany"></ui5-cb-item>
-        <ui5-cb-item text="United Kingdom"></ui5-cb-item>
-        <ui5-cb-item text="Kazakhstan"></ui5-cb-item>
-      </ui5-combobox>
-
-      <ui5-label for="supplier">Supplier:</ui5-label>
-      <ui5-combobox id="supplier" placeholder="Supplier" filter="Contains">
-        <ui5-cb-item text="Austria"></ui5-cb-item>
-        <ui5-cb-item text="Bulgaria"></ui5-cb-item>
-        <ui5-cb-item text="Germany"></ui5-cb-item>
-        <ui5-cb-item text="United Kingdom"></ui5-cb-item>
-        <ui5-cb-item text="Kazakhstan"></ui5-cb-item>
-      </ui5-combobox>
+<!--      <ui5-label for="supplier">Supplier:</ui5-label>-->
+<!--      <ui5-combobox id="supplier" placeholder="Supplier" filter="Contains">-->
+<!--        <ui5-cb-item text="Austria"></ui5-cb-item>-->
+<!--        <ui5-cb-item text="Bulgaria"></ui5-cb-item>-->
+<!--        <ui5-cb-item text="Germany"></ui5-cb-item>-->
+<!--        <ui5-cb-item text="United Kingdom"></ui5-cb-item>-->
+<!--        <ui5-cb-item text="Kazakhstan"></ui5-cb-item>-->
+<!--      </ui5-combobox>-->
 
       <ui5-label for="dueOn">Due On:</ui5-label>
       <ui5-date-picker id="dueOn"></ui5-date-picker>
@@ -84,19 +75,18 @@
              [value]="entity[field]"
              (input)="entity[field]  = input.value"></ui5-input>
 
-  {{entity[field]}}
 </ng-template>
 
 
-
-<ng-template #combobox let-entity let-field="field" let-title="title">
-  <ui5-label [for]="field" required>{{title}}:</ui5-label>
-  <ui5-combobox #combo [id]="field"  filter="Contains"
-                [value]="entity[field]"
-                (change)="entity[field]  = combo.value"
-  >
-    <ui5-cb-item *ngFor="let item of addressDB"  [text]="item.name"></ui5-cb-item>
-  </ui5-combobox>
-
-  {{combo.value | json}}
+<ng-template #combobox let-entity let-field="field" let-title="title" let-ds="dataSource">
+  <ng-template [ngIf]="ds">
+    <ui5-label [for]="field" required>{{title}}:</ui5-label>
+    <ui5-combobox #combo [id]="field" filter="StartsWith"
+                  [value]="entity[field].name"
+                  (change)="onCBSelection(field, combo.value)">
+      <ui5-cb-item *ngFor="let item of ds" [text]="item.name"></ui5-cb-item>
+    </ui5-combobox>
+  </ng-template>
 </ng-template>
+
+

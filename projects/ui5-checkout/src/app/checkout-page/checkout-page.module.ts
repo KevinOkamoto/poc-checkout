@@ -14,7 +14,6 @@ import '@ui5/webcomponents-fiori/dist/Bar';
 
 import '@ui5/webcomponents-icons/dist/action-settings.js';
 import '@ui5/webcomponents-icons/dist/home.js';
-import {OrigamiFormsModule} from '@codebakery/origami/forms';
 import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
@@ -23,7 +22,6 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    OrigamiFormsModule,
     HttpClientModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
