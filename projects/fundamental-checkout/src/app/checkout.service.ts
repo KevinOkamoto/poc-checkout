@@ -8,7 +8,19 @@ import {
 const REQUISITION: Requisition = {
   id: '1234',
   title: 'My Requisition',
-  subtitle: 'Subtitle'
+  subtitle: 'Subtitle',
+  shippingAddress: {
+    address: '816-292 Ipsum St.',
+    city: 'Yellowknife',
+    zip: '7221',
+    country: 'Paraguay'
+  },
+  billingAddress: {
+    address: '816-292 Ipsum St.',
+    city: 'Yellowknife',
+    zip: '7221',
+    country: 'Paraguay'
+  }
 };
 
 @Injectable()

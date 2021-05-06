@@ -20,10 +20,10 @@
             <fdp-input name="subtitle" type="text"> </fdp-input>
           </fdp-form-field>
           <fdp-form-field #shippingAddressField label="Shipping Address" id="shippingAddress" column="1" rank="3">
-            <fdp-combobox name="shippingAddress" [displayKey]="'address'" lookupKey="address" [dataSource]="addresses$"></fdp-combobox>
+            <fdp-combobox name="shippingAddress" [value]="requisition.shippingAddress.address" [displayKey]="'address'" [lookupKey]="'address'" [dataSource]="addresses$"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #billingAddressField label="Billing Address" id="billingAddress" column="1" rank="4">
-            <fdp-combobox name="billingAddress" [displayKey]="'address'" lookupKey="address" [dataSource]="addresses$"></fdp-combobox>
+            <fdp-combobox name="billingAddress" [value]="requisition.billingAddress.address" [displayKey]="'address'" [lookupKey]="'address'" [dataSource]="addresses$"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #supplierField label="Supplier" id="supplier" column="1" rank="5">
             <fdp-combobox name="supplier" [dataSource]="[]" displayKey="shortDescription"></fdp-combobox>
