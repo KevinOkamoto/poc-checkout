@@ -1,0 +1,1570 @@
+[
+  {
+    "section": "I",
+    "hscode": "01",
+    "name": "Animals; live",
+    "parent": "TOTAL",
+    "level": 2
+  },
+  {
+    "section": "I",
+    "hscode": "0101",
+    "name": "Horses, asses, mules and hinnies; live",
+    "parent": "01",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "010121",
+    "name": "Horses; live, pure-bred breeding animals",
+    "parent": "0101",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010129",
+    "name": "Horses; live, other than pure-bred breeding animals",
+    "parent": "0101",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010130",
+    "name": "Asses; live",
+    "parent": "0101",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010190",
+    "name": "Mules and hinnies; live",
+    "parent": "0101",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0102",
+    "name": "Bovine animals; live",
+    "parent": "01",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "010221",
+    "name": "Cattle; live, pure-bred breeding animals",
+    "parent": "0102",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010229",
+    "name": "Cattle; live, other than pure-bred breeding animals",
+    "parent": "0102",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010231",
+    "name": "Buffalo; live, pure-bred breeding animals",
+    "parent": "0102",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010239",
+    "name": "Buffalo; live, other than pure-bred breeding animals",
+    "parent": "0102",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010290",
+    "name": "Bovine animals; live, other than cattle and buffalo",
+    "parent": "0102",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0103",
+    "name": "Swine; live",
+    "parent": "01",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "010310",
+    "name": "Swine; live, pure-bred breeding animals",
+    "parent": "0103",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010391",
+    "name": "Swine; live, other than pure-bred breeding animals, weighing less than 50kg",
+    "parent": "0103",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010392",
+    "name": "Swine; live, other than pure-bred breeding animals, weighing 50kg or more",
+    "parent": "0103",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0104",
+    "name": "Sheep and goats; live",
+    "parent": "01",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "010410",
+    "name": "Sheep; live",
+    "parent": "0104",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010420",
+    "name": "Goats; live",
+    "parent": "0104",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0105",
+    "name": "Poultry; live, fowls of the species Gallus domesticus, ducks, geese, turkeys and guinea fowls",
+    "parent": "01",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "010511",
+    "name": "Poultry; live, fowls of the species Gallus domesticus, weighing not more than 185g",
+    "parent": "0105",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010512",
+    "name": "Poultry; live, turkeys, weighing not more than 185g",
+    "parent": "0105",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010513",
+    "name": "Poultry; live, ducks, weighing not more than 185g",
+    "parent": "0105",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010514",
+    "name": "Poultry; live, geese, weighing not more than 185g",
+    "parent": "0105",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010515",
+    "name": "Poultry; live, guinea fowls, weighing not more than 185g",
+    "parent": "0105",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010594",
+    "name": "Poultry; live, fowls of the species Gallus domesticus, weighing more than 185g",
+    "parent": "0105",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010599",
+    "name": "Poultry; live, ducks, geese, turkeys and guinea fowls, weighing more than 185g",
+    "parent": "0105",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0106",
+    "name": "Animals; live, n.e.c. in chapter 01",
+    "parent": "01",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "010611",
+    "name": "Mammals; live, primates",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010612",
+    "name": "Mammals; live, whales, dolphins and porpoises (mammals of the order Cetacea); manatees and dugongs (mammals of the order Sirenia); seals, sea lions and walruses (mammals of the suborder Pinnipedia)",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010613",
+    "name": "Mammals; live, camels and other camelids (Camelidae)",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010614",
+    "name": "Mammals; live, rabbits and hares",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010619",
+    "name": "Mammals; live, other than primates, whales, dolphins, porpoises (mammals of the order Cetacea); manatees, dugongs (mammals of the order Sirenia); seals, sea lions, walruses (mammals of the suborder Pinnipedia), camels, other camelids, rabbits and hares",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010620",
+    "name": "Reptiles; live (including snakes and turtles)",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010631",
+    "name": "Birds; live, birds of prey",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010632",
+    "name": "Birds; live, Psittaciformes",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010633",
+    "name": "Birds; live, ostriches; emus (Dromaius novaehollandiae)",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010639",
+    "name": "Birds; live, other than birds of prey, Psittaciformes, ostriches and emus (Dromaius novaehollandiae)",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010641",
+    "name": "Insects; live, bees",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010649",
+    "name": "Insects; live, other than bees",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "010690",
+    "name": "Animals; live, n.e.c. in chapter 01, other than mammals, reptiles, birds and insects",
+    "parent": "0106",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "02",
+    "name": "Meat and edible meat offal",
+    "parent": "TOTAL",
+    "level": 2
+  },
+  {
+    "section": "I",
+    "hscode": "0201",
+    "name": "Meat of bovine animals; fresh or chilled",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020110",
+    "name": "Meat; of bovine animals, carcasses and half-carcasses, fresh or chilled",
+    "parent": "0201",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020120",
+    "name": "Meat; of bovine animals, cuts with bone in (excluding carcasses and half-carcasses), fresh or chilled",
+    "parent": "0201",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020130",
+    "name": "Meat; of bovine animals, boneless cuts, fresh or chilled",
+    "parent": "0201",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0202",
+    "name": "Meat of bovine animals; frozen",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020210",
+    "name": "Meat; of bovine animals, carcasses and half-carcasses, frozen",
+    "parent": "0202",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020220",
+    "name": "Meat; of bovine animals, cuts with bone in (excluding carcasses and half-carcasses), frozen",
+    "parent": "0202",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020230",
+    "name": "Meat; of bovine animals, boneless cuts, frozen",
+    "parent": "0202",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0203",
+    "name": "Meat of swine; fresh, chilled or frozen",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020311",
+    "name": "Meat; of swine, carcasses and half-carcasses, fresh or chilled",
+    "parent": "0203",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020312",
+    "name": "Meat; of swine, hams, shoulders and cuts thereof, with bone in, fresh or chilled",
+    "parent": "0203",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020319",
+    "name": "Meat; of swine, n.e.c. in item no. 0203.1, fresh or chilled",
+    "parent": "0203",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020321",
+    "name": "Meat; of swine, carcasses and half-carcasses, frozen",
+    "parent": "0203",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020322",
+    "name": "Meat; of swine, hams, shoulders and cuts thereof, with bone in, frozen",
+    "parent": "0203",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020329",
+    "name": "Meat; of swine, n.e.c. in item no. 0203.2, frozen",
+    "parent": "0203",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0204",
+    "name": "Meat of sheep or goats; fresh, chilled or frozen",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020410",
+    "name": "Meat; of sheep, lamb carcasses and half-carcasses, fresh or chilled",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020421",
+    "name": "Meat; of sheep, carcasses and half-carcasses (excluding carcasses and half-carcasses of lamb), fresh or chilled",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020422",
+    "name": "Meat; of sheep (including lamb), cuts with bone in (excluding carcasses and half-carcasses), fresh or chilled",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020423",
+    "name": "Meat; of sheep (including lamb), boneless cuts, fresh or chilled",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020430",
+    "name": "Meat; of sheep, lamb carcasses and half-carcasses, frozen",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020441",
+    "name": "Meat; of sheep, carcasses and half-carcasses (excluding carcasses and half-carcasses of lamb), frozen",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020442",
+    "name": "Meat; of sheep (including lamb), cuts with bone in (excluding carcasses and half-carcasses), frozen",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020443",
+    "name": "Meat; of sheep (including lamb), boneless cuts, frozen",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020450",
+    "name": "Meat; of goats, fresh, chilled or frozen",
+    "parent": "0204",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0205",
+    "name": "Meat; of horses, asses, mules or hinnies, fresh, chilled or frozen",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020500",
+    "name": "Meat; of horses, asses, mules or hinnies, fresh, chilled or frozen",
+    "parent": "0205",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0206",
+    "name": "Edible offal of bovine animals, swine, sheep, goats, horses, asses, mules or hinnies; fresh, chilled or frozen",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020610",
+    "name": "Offal, edible; of bovine animals, fresh or chilled",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020621",
+    "name": "Offal, edible; of bovine animals, tongues, frozen",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020622",
+    "name": "Offal, edible; of bovine animals, livers, frozen",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020629",
+    "name": "Offal, edible; of bovine animals, (other than tongues and livers), frozen",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020630",
+    "name": "Offal, edible; of swine, fresh or chilled",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020641",
+    "name": "Offal, edible; of swine, livers, frozen",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020649",
+    "name": "Offal, edible; of swine, (other than livers), frozen",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020680",
+    "name": "Offal, edible; of sheep, goats, horses, asses, mules or hinnies, fresh or chilled",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020690",
+    "name": "Offal, edible; of sheep, goats, horses, asses, mules or hinnies, frozen",
+    "parent": "0206",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0207",
+    "name": "Meat and edible offal of poultry; of the poultry of heading no. 0105, (i.e. fowls of the species Gallus domesticus), fresh, chilled or frozen",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020711",
+    "name": "Meat and edible offal; of fowls of the species Gallus domesticus, not cut in pieces, fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020712",
+    "name": "Meat and edible offal; of fowls of the species Gallus domesticus, not cut in pieces, frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020713",
+    "name": "Meat and edible offal; of fowls of the species Gallus domesticus, cuts and offal, fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020714",
+    "name": "Meat and edible offal; of fowls of the species Gallus domesticus, cuts and offal, frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020724",
+    "name": "Meat and edible offal; of turkeys, not cut in pieces, fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020725",
+    "name": "Meat and edible offal; of turkeys, not cut in pieces, frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020726",
+    "name": "Meat and edible offal; of turkeys, cuts and offal, fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020727",
+    "name": "Meat and edible offal; of turkeys, cuts and offal, frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020741",
+    "name": "Meat and edible offal; of ducks, not cut in pieces, fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020742",
+    "name": "Meat and edible offal; of ducks, not cut in pieces, frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020743",
+    "name": "Meat and edible offal; of ducks, fatty livers (foie gras), fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020744",
+    "name": "Meat and edible offal; of ducks, cuts and offal, excluding fatty livers, fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020745",
+    "name": "Meat and edible offal; of ducks, cuts and offal, excluding fatty livers, frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020751",
+    "name": "Meat and edible offal; of geese, not cut in pieces, fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020752",
+    "name": "Meat and edible offal; of geese, not cut in pieces, frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020753",
+    "name": "Meat and edible offal; of geese, fatty livers (foie gras), fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020754",
+    "name": "Meat and edible offal; of geese, cuts and offal, excluding fatty livers, fresh or chilled",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020755",
+    "name": "Meat and edible offal; of geese, cuts and offal, excluding fatty livers, frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020760",
+    "name": "Meat and edible offal; of guinea fowls, fresh, chilled or frozen",
+    "parent": "0207",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0208",
+    "name": "Meat and edible meat offal, n.e.c. in chapter 2; fresh, chilled or frozen",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020810",
+    "name": "Meat and edible meat offal; of rabbits or hares, fresh, chilled or frozen",
+    "parent": "0208",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020830",
+    "name": "Meat and edible meat offal; of primates, fresh, chilled or frozen",
+    "parent": "0208",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020840",
+    "name": "Meat and edible meat offal; of whales, dolphins and porpoises (mammals of the order Cetacea); of manatees and dugongs (mammals of the order Sirenia); of seals, sea lions and walruses (mammals of the suborder Pinnipedia), fresh, chilled or frozen",
+    "parent": "0208",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020850",
+    "name": "Meat and edible meat offal; of reptiles (including snakes and turtles), fresh, chilled or frozen",
+    "parent": "0208",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020860",
+    "name": "Meat and edible meat offal; of camels and other camelids (Camelidae), fresh, chilled or frozen",
+    "parent": "0208",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020890",
+    "name": "Meat and edible meat offal; n.e.c. in chapter 2, fresh, chilled or frozen",
+    "parent": "0208",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0209",
+    "name": "Pig fat, free of lean meat, and poultry fat, not rendered or otherwise extracted, fresh, chilled, frozen, salted, in brine, dried or smoked",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "020910",
+    "name": "Fat; pig fat, free of lean meat, not rendered or otherwise extracted, fresh, chilled, frozen, salted, in brine, dried or smoked",
+    "parent": "0209",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "020990",
+    "name": "Fat; poultry fat, not rendered or otherwise extracted, fresh, chilled, frozen, salted, in brine, dried or smoked",
+    "parent": "0209",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0210",
+    "name": "Meat and edible meat offal; salted, in brine, dried or smoked; edible flours and meals of meat or meat offal",
+    "parent": "02",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "021011",
+    "name": "Meat; salted, in brine, dried or smoked, of swine, hams, shoulders and cuts thereof, with bone in",
+    "parent": "0210",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "021012",
+    "name": "Meat; salted, in brine, dried or smoked, of swine, bellies (streaky) and cuts thereof",
+    "parent": "0210",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "021019",
+    "name": "Meat; salted in brine, dried or smoked, of swine, n.e.c. in item no. 0210.1",
+    "parent": "0210",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "021020",
+    "name": "Meat; salted, in brine, dried or smoked, of bovine animals",
+    "parent": "0210",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "021091",
+    "name": "Meat and edible meat offal; salted, in brine, dried or smoked, and edible flours and meals of meat or meat offal, of primates",
+    "parent": "0210",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "021092",
+    "name": "Meat and edible meat offal; salted, in brine, dried or smoked; edible flours, meals of meat or meat offal, of whales, dolphins, porpoises (of order Cetacea); manatees, dugongs (of order Sirenia); seals, sea lions, and walruses (of suborder Pinnipedia)",
+    "parent": "0210",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "021093",
+    "name": "Meat and edible meat offal; salted, in brine, dried or smoked, and edible flours and meals of meat or meat offal, of reptiles (including snakes and turtles)",
+    "parent": "0210",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "021099",
+    "name": "Meat and edible meat offal; salted, in brine, dried or smoked, and edible flours and meals of meat or meat offal, other than of primates, whales, dolphins, porpoises, manatees, dugongs, seals, sea lions, walruses, reptiles (including snakes and turtles)",
+    "parent": "0210",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "03",
+    "name": "Fish and crustaceans, molluscs and other aquatic invertebrates",
+    "parent": "TOTAL",
+    "level": 2
+  },
+  {
+    "section": "I",
+    "hscode": "0301",
+    "name": "Fish; live",
+    "parent": "03",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "030111",
+    "name": "Fish; live, ornamental, freshwater",
+    "parent": "0301",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030119",
+    "name": "Fish; live, ornamental, other than freshwater",
+    "parent": "0301",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030191",
+    "name": "Fish; live, trout (Salmo trutta, Oncorhynchus mykiss, Oncorhynchus clarki, Oncorhynchus aguabonita, Oncorhynchus gilae, Oncorhynchus apache and Oncorhynchus chrysogaster)",
+    "parent": "0301",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030192",
+    "name": "Fish; live, eels (Anguilla spp.)",
+    "parent": "0301",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030193",
+    "name": "Fish; live, carp (Cyprinus spp., Carassius spp., Ctenopharyngodon idellus, Hypophthalmichthys spp., Cirrhinus spp., Mylopharyngodon piceus, Catla catla, Labeo spp., Osteochilus hasselti, Leptobarbus hoeveni, Megalobrama spp.)",
+    "parent": "0301",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030194",
+    "name": "Fish; live, Atlantic and Pacific bluefin tunas (Thunnus thynnus, Thunnus orientalis)",
+    "parent": "0301",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030195",
+    "name": "Fish; live, southern bluefin tunas (Thunnus maccoyii)",
+    "parent": "0301",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030199",
+    "name": "Fish; live, n.e.c. in heading 0301",
+    "parent": "0301",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0302",
+    "name": "Fish; fresh or chilled, excluding fish fillets and other fish meat of heading 0304",
+    "parent": "03",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "030211",
+    "name": "Fish; fresh or chilled, trout (Salmo trutta, Oncorhynchus mykiss, Oncorhynchus clarki, Oncorhynchus aguabonita, Oncorhynchus gilae, Oncorhynchus apache and Oncorhynchus chrysogaster), excluding fillets, fish meat of 0304, and edible fish offal of 0302.9",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030213",
+    "name": "Fish; fresh or chilled, Pacific salmon (Oncorhynchus nerka, Oncorhynchus gorbuscha, Oncorhynchus keta, Oncorhynchus tschawytscha, Oncorhynchus kisutch, Oncorhynchus masou, Oncorhynchus rhodurus), not fillets, meat of 0304, and edible fish offal of 0302.9",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030214",
+    "name": "Fish; fresh or chilled, Atlantic salmon (Salmo salar) and Danube salmon (Hucho hucho), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030219",
+    "name": "Fish; fresh or chilled, salmonidae, n.e.c. in item no. 0302.1, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030221",
+    "name": "Fish; fresh or chilled, halibut (Reinhardtius hippoglossoides, Hippoglossus hippoglossus, Hippoglossus stenolepis), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030222",
+    "name": "Fish; fresh or chilled, plaice (Pleuronectes platessa), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030223",
+    "name": "Fish; fresh or chilled, sole (Solea spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030224",
+    "name": "Fish; fresh or chilled, turbots (Psetta maxima, Scophthalmidae), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030229",
+    "name": "Fish; fresh or chilled, flat fish, n.e.c. in item no. 0302.2, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030231",
+    "name": "Fish; fresh or chilled, albacore or longfinned tunas (Thunnus alalunga), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030232",
+    "name": "Fish; fresh or chilled, yellowfin tunas (Thunnus albacares), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030233",
+    "name": "Fish; fresh or chilled, skipjack or stripe-bellied bonito, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030234",
+    "name": "Fish; fresh or chilled, bigeye tunas (Thunnus obesus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030235",
+    "name": "Fish; fresh or chilled, Atlantic and Pacific bluefin tunas (Thunnus thynnus, Thunnus orientalis), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030236",
+    "name": "Fish; fresh or chilled, southern bluefin tunas (Thunnus maccoyii), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030239",
+    "name": "Fish; fresh or chilled, tuna, n.e.c. in item no. 0302.3, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030241",
+    "name": "Fish; fresh or chilled, herrings (Clupea harengus, Clupea pallasii), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030242",
+    "name": "Fish; fresh or chilled, anchovies (Engraulis spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030243",
+    "name": "Fish; fresh or chilled, sardines (Sardina pilchardus, Sardinops spp.), sardinella (Sardinella spp.), brisling or sprats (Sprattus sprattus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030244",
+    "name": "Fish; fresh or chilled, mackerel (Scomber scombrus, Scomber australasicus, Scomber japonicus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030245",
+    "name": "Fish; fresh or chilled, jack and horse mackerel (Trachurus spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030246",
+    "name": "Fish; fresh or chilled, cobia (Rachycentron canadum), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030247",
+    "name": "Fish; fresh or chilled, swordfish (Xiphias gladius), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030249",
+    "name": "Fish; fresh or chilled, n.e.c. in item no. 0302.4, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030251",
+    "name": "Fish; fresh or chilled, cod (Gadus morhua, Gadus ogac, Gadus macrocephalus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030252",
+    "name": "Fish; fresh or chilled, haddock (Melanogrammus aeglefinus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030253",
+    "name": "Fish; fresh or chilled, coalfish (Pollachius virens), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030254",
+    "name": "Fish; fresh or chilled, hake (Merluccius spp., Urophycis spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030255",
+    "name": "Fish; fresh or chilled, Alaska pollack (Theragra chalcogramma), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030256",
+    "name": "Fish; fresh or chilled, blue whitings (Micromesistius poutassou, Micromesistius australis),excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030259",
+    "name": "Fish; fresh or chilled, n.e.c. in item no. 0302.5, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030271",
+    "name": "Fish; fresh or chilled, tilapias (Oreochromis spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030272",
+    "name": "Fish; fresh or chilled, catfish (Pangasius spp., Silurus spp., Clarias spp., Ictalurus spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030273",
+    "name": "Fish; fresh or chilled, Carp (as specified by the WCO.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030274",
+    "name": "Fish; fresh or chilled, eels (Anguilla spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030279",
+    "name": "Fish; fresh or chilled, Nile perch (Lates niloticus) and snakeheads (Channa spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030281",
+    "name": "Fish; fresh or chilled, dogfish and other sharks, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030282",
+    "name": "Fish; fresh or chilled, rays and skates (Rajidae), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030283",
+    "name": "Fish; fresh or chilled, toothfish (Dissostichus spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030284",
+    "name": "Fish; fresh or chilled, seabass (Dicentrarchus spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030285",
+    "name": "Fish; fresh or chilled, seabream (Sparidae), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030289",
+    "name": "Fish; fresh or chilled, n.e.c. in heading 0302, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0302.91 to 0302.99",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030291",
+    "name": "Fish; fresh or chilled, livers, roes and milt",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030292",
+    "name": "Fish; fresh or chilled, shark fins",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030299",
+    "name": "Fish; fresh or chilled, fish fins (other than shark fins), heads, tails, maws and other edible fish offal",
+    "parent": "0302",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0303",
+    "name": "Fish; frozen, excluding fish fillets and other fish meat of heading 0304",
+    "parent": "03",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "030311",
+    "name": "Fish; frozen, Pacific salmon, sockeye salmon (red salmon) (Oncorhynchus nerka), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030312",
+    "name": "Fish; frozen, Pacific salmon (Oncorhynchus gorbuscha/keta/tschawytscha/ kisutch/masou/rhodurus) other than sockeye salmon (Oncorhynchus nerka), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030313",
+    "name": "Fish; frozen, Atlantic salmon (Salmo salar) and Danube salmon (Hucho hucho), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030314",
+    "name": "Fish; frozen, trout (Salmo trutta, Oncorhynchus mykiss, Oncorhynchus clarki, Oncorhynchus aguabonita, Oncorhynchus gilae, Oncorhynchus apache and Oncorhynchus chrysogaster), excluding fillets, meat of 0304, and edible fish offal of 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030319",
+    "name": "Fish; frozen, salmonidae, n.e.c. in item no. 0303.1, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030323",
+    "name": "Fish; frozen, tilapias (Oreochromis spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030324",
+    "name": "Fish; frozen, catfish (Pangasius spp., Silurus spp., Clarias spp., Ictalurus spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030325",
+    "name": "Fish; frozen, carp  (as specified by the WCO), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030326",
+    "name": "Fish; frozen, eels (Anguilla spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030329",
+    "name": "Fish; frozen, Nile perch (Lates niloticus) and snakeheads (Channa spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030331",
+    "name": "Fish; frozen, halibut (Reinhardtius hippoglossoides, Hippoglossus hippoglossus, Hippoglossus stenolepis), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030332",
+    "name": "Fish; frozen, plaice (Pleuronectes platessa), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030333",
+    "name": "Fish; frozen, sole (Solea spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030334",
+    "name": "Fish; frozen, turbots (Psetta maxima, Scophthalmidae), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030339",
+    "name": "Fish; frozen, flat fish, n.e.c. in item no. 0303.3, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030341",
+    "name": "Fish; frozen, albacore or longfinned tunas (Thunnus alalunga), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030342",
+    "name": "Fish; frozen, yellowfin tunas (Thunnus albacares), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030343",
+    "name": "Fish; frozen, skipjack or stripe-bellied bonito, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030344",
+    "name": "Fish; frozen, bigeye tunas (Thunnus obesus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030345",
+    "name": "Fish; frozen, Atlantic and Pacific bluefin tunas (Thunnus thynnus, Thunnus orientalis), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030346",
+    "name": "Fish; frozen, southern bluefin tunas (Thunnus maccoyii), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030349",
+    "name": "Fish; frozen, tuna, n.e.c. in item no. 0303.4, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030351",
+    "name": "Fish; frozen, herrings (Clupea harengus, Clupea pallasii), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030353",
+    "name": "Fish; frozen, sardines (Sardina pilchardus, Sardinops spp.), sardinella (Sardinella spp.), brisling or sprats (Sprattus sprattus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030354",
+    "name": "Fish; frozen, mackerel (Scomber scombrus, Scomber australasicus, Scomber japonicus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030355",
+    "name": "Fish; frozen, jack and horse mackerel (Trachurus spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030356",
+    "name": "Fish; frozen, cobia (Rachycentron canadum), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030357",
+    "name": "Fish; frozen, swordfish (Xiphias gladius), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030359",
+    "name": "Fish; frozen, n.e.c. in item no. 0303.5, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030363",
+    "name": "Fish; frozen, cod (Gadus morhua, Gadus ogac, Gadus macrocephalus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030364",
+    "name": "Fish; frozen, haddock (Melanogrammus aeglefinus), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030365",
+    "name": "Fish; frozen, coalfish (Pollachius virens), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030366",
+    "name": "Fish; frozen, hake (Merluccius spp., Urophycis spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030367",
+    "name": "Fish; frozen, Alaska pollack (Theraga chalcogramma), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030368",
+    "name": "Fish; frozen, blue whitings (Micromesistius poutassou, Micromesistius australis), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030369",
+    "name": "Fish; frozen, of Bregmacerotidae, Euclichthyidae, Gadidae, Macrouridae, Melanonidae, Merlucciidae, Moridae, Muraenolepididae, other than cod, haddock, coalfish, hake, Alaska pollack, blue whitings, not fillets, meat of 0304, and edible offal of 0303.9",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030381",
+    "name": "Fish; frozen, dogfish and other sharks, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030382",
+    "name": "Fish; frozen, rays and skates (Rajidae), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030383",
+    "name": "Fish; frozen, toothfish (Dissostichus spp.), excluding fillets, livers, roes, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030384",
+    "name": "Fish; frozen, seabass (Dicentrarchus spp.), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030389",
+    "name": "Fish; frozen, n.e.c. in heading 0303, excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030391",
+    "name": "Fish; frozen, livers, roes and milt",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030392",
+    "name": "Fish; frozen, shark fins",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030399",
+    "name": "Fish; frozen, fish fins (other than shark fins), heads, tails, maws and other edible fish offal",
+    "parent": "0303",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "0304",
+    "name": "Fish fillets and other fish meat (whether or not minced); fresh, chilled or frozen",
+    "parent": "03",
+    "level": 4
+  },
+  {
+    "section": "I",
+    "hscode": "030431",
+    "name": "Fish fillets; fresh or chilled, tilapias (Oreochromis spp.)",
+    "parent": "0304",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030432",
+    "name": "Fish fillets; fresh or chilled, catfish (Pangasius spp., Silurus spp., Clarias spp., Ictalurus spp.)",
+    "parent": "0304",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030433",
+    "name": "Fish fillets; fresh or chilled, Nile perch (Lates niloticus)",
+    "parent": "0304",
+    "level": 6
+  },
+  {
+    "section": "I",
+    "hscode": "030439",
+    "name": "Fish fillets; fresh or chilled, carp (as specified by the WCO), eels (Anguilla spp.), and snakeheads (Channa spp.)",
+    "parent": "0304",
+    "level": 6
+  }
+]
