@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import {
   HttpClient
 } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { FdDate } from '@fundamental-ngx/core';
 import {
   Address,
   LineItem,
@@ -10,31 +12,22 @@ import {
   Supplier
 } from './models';
 
-const REQUISITION: Requisition = {
-  id: '1234',
-  title: 'My Requisition',
-  subtitle: 'Subtitle',
-  shippingAddress: {
-    address: '816-292 Ipsum St.',
-    city: 'Yellowknife',
-    zip: '7221',
-    country: 'Paraguay'
-  },
-  billingAddress: {
-    address: '816-292 Ipsum St.',
-    city: 'Yellowknife',
-    zip: '7221',
-    country: 'Paraguay'
-  }
-};
-
 @Injectable()
 export class CheckoutService {
 
   constructor(private http: HttpClient) {}
 
   getRequisition(): Observable<Requisition> {
-    return of(REQUISITION);
+    return this.http.get<Requisition>('/assets/requisitions.json')
+      .pipe(
+        map(reqs => reqs[0]),
+        map(req => {
+          const date = new Date(req.dueOn);
+          req.dueOn = new FdDate(date.getFullYear(), date.getMonth() + 1, date.getDate());
+          console.log(req.dueOn)
+          return req;
+        })
+      );
   }
 
   getAddresses(): Observable<Address[]> {

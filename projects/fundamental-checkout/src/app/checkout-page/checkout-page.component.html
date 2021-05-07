@@ -17,7 +17,7 @@
             <fdp-input name="title" type="text" [value]="requisition.title"> </fdp-input>
           </fdp-form-field>
           <fdp-form-field #subTitleField label="Subtitle" id="subtitle" column="1" rank="2" placeholder="Enter subtitle">
-            <fdp-input name="subtitle" type="text"> </fdp-input>
+            <fdp-input name="subtitle" type="text" [value]="requisition.subtitle"> </fdp-input>
           </fdp-form-field>
           <fdp-form-field #shippingAddressField label="Shipping Address" id="shippingAddress" column="1" rank="3">
             <fdp-combobox name="shippingAddress" [value]="requisition.shippingAddress.address" [displayKey]="'address'" [lookupKey]="'address'" [dataSource]="addresses$"></fdp-combobox>
@@ -26,29 +26,29 @@
             <fdp-combobox name="billingAddress" [value]="requisition.billingAddress.address" [displayKey]="'address'" [lookupKey]="'address'" [dataSource]="addresses$"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #supplierField label="Supplier" id="supplier" column="1" rank="5">
-            <fdp-combobox name="supplier" [dataSource]="suppliers$" [displayKey]="'name'" [lookupKey]="'name'"></fdp-combobox>
+            <fdp-combobox name="supplier" [value]="requisition.supplier.name" [dataSource]="suppliers$" [displayKey]="'name'" [lookupKey]="'name'"></fdp-combobox>
           </fdp-form-field>
           <fdp-form-field #dueDateField label="Due Date" id="dueDate" column="2" rank="6">
-            <fdp-date-picker name="dueDate" type="single"> </fdp-date-picker>
+            <fdp-date-picker name="dueDate" type="single" [value]="requisition.dueOn"> </fdp-date-picker>
           </fdp-form-field>
           <fdp-form-field #currencyField label="Currency" id="currency" column="2" rank="7">
-            <fdp-select name="currency" [list]="[]"> </fdp-select>
+            <fdp-select name="currency" [value]="requisition.currency" [list]="['USD']"> </fdp-select>
           </fdp-form-field>
-          <fdp-form-field #requesterField label="Requester" id="requester" column="2" rank="8">
-            <fdp-input-group name="requester">
-              <fdp-input-group-input tyoe="text"></fdp-input-group-input>
+          <fdp-form-field #requesterField label="Requestor" id="requestor" column="2" rank="8">
+            <fdp-input-group name="requestor" [value]="requisition.requestor.name">
+              <fdp-input-group-input type="text"></fdp-input-group-input>
               <fdp-input-group-addon><fdp-button glyph="value-help"></fdp-button></fdp-input-group-addon>
             </fdp-input-group>
           </fdp-form-field>
           <fdp-form-field #commodityCodeField label="Commodity Code" id="commodityCode" column="2" rank="9">
-            <fdp-input-group name="commodityCode">
-              <fdp-input-group-input tyoe="text"></fdp-input-group-input>
+            <fdp-input-group name="commodityCode" [value]="requisition.commodityCode.name">
+              <fdp-input-group-input type="text"></fdp-input-group-input>
               <fdp-input-group-addon><fdp-button glyph="value-help"></fdp-button></fdp-input-group-addon>
             </fdp-input-group>
           </fdp-form-field>
           <fdp-form-field #deliveryTypeField label="Delivery Type" id="deliveryType" column="2" rank="10">
-            <fdp-radio-group name="deliveryType" isInline="true">
-              <fdp-radio-button value="over night">Over Night</fdp-radio-button>
+            <fdp-radio-group name="deliveryType" [selected]="'express'" isInline="true">
+              <fdp-radio-button value="over-night">Over Night</fdp-radio-button>
               <fdp-radio-button value="express">Express</fdp-radio-button>
             </fdp-radio-group>
           </fdp-form-field>
