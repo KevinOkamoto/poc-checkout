@@ -1,16 +1,19 @@
-<ui5-page id="page" background-design="List" floating-footer show-footer>
+<ui5-page *ngIf="requisition" id="page" background-design="List" floating-footer show-footer>
   <div slot="header">
     <ui5-bar design="Header">
+      {{requisition}}
       <ui5-label slot="middleContent">Checkout Page</ui5-label>
       <ui5-button design="Default" slot="endContent">Submit</ui5-button>
       <ui5-button design="Emphasized" slot="endContent">Edit</ui5-button>
     </ui5-bar>
   </div>
+
+
   <ng-container *ngTemplateOutlet="headerForm">
   </ng-container>
 
   <ng-container *ngTemplateOutlet="lineItems; context: {$implicit: requisition, field:'lineItems',
-      title: 'Line Items', dataSource: lineItems$ | async  }">
+        title: 'Line Items', dataSource: lineItems$ | async  }">
   </ng-container>
 
   <div slot="footer" *ngIf="showFooter">
@@ -51,8 +54,8 @@
       </ng-container>
 
 
-      <ng-container *ngTemplateOutlet="combobox; context: {$implicit: requisition, field:'requester',
-      title: 'Requester', dataSource: userDB  }">
+      <ng-container *ngTemplateOutlet="combobox; context: {$implicit: requisition, field:'requestor',
+      title: 'Requestor', dataSource: userDB  }">
       </ng-container>
 
 
@@ -66,7 +69,7 @@
 
 
 <ng-template #input let-entity let-field="field" let-title="title" let-readonly="readonly">
-  <ui5-label [for]="field" required>{{title}}:</ui5-label>
+  <ui5-label [for]="field">{{title}}:</ui5-label>
   <ui5-input #input *ngIf="entity && (!readonly)"
              [id]="field"
              [value]="entity[field]"
@@ -78,7 +81,7 @@
 
 
 <ng-template #select let-entity let-field="field" let-title="title" let-ds="dataSource">
-  <ui5-label [for]="field" required>{{title}}:</ui5-label>
+  <ui5-label [for]="field">{{title}}:</ui5-label>
   <ui5-select *ngIf="entity" #select class="select" [value]="entity[field]" [id]="field"
               (change)="entity[field]  = select.selectedOption.innerText">
     <ui5-option *ngFor="let item of ds" [selected]="item === entity[field]">{{item}}</ui5-option>
@@ -108,7 +111,7 @@
 
 
 <ng-template #combobox let-entity let-field="field" let-title="title" let-ds="dataSource">
-  <ui5-label [for]="field" required>{{title}}:</ui5-label>
+  <ui5-label [for]="field">{{title}}:</ui5-label>
   <ui5-combobox *ngIf="entity" #combo [id]="field" filter="Contains"
                 [value]="entity[field]?.name"
                 (change)="onCBSelection(field, combo.value)">
@@ -120,7 +123,7 @@
 <ng-template #lineItems let-entity let-field="field" let-title="title" let-ds="dataSource">
 
   <div class="table-wrapper" style="height: 350px; overflow: scroll;">
-    <ui5-label for="lineItems" required>{{title}}:</ui5-label>
+    <ui5-label for="lineItems">{{title}}:</ui5-label>
     <div class="header">
       <ui5-input id="searchInput" placeholder="Enter search criteria ..." style="width: 120px">
         <ui5-icon id="searchIcon" slot="icon" name="search"></ui5-icon>
@@ -155,7 +158,7 @@
 
       <ui5-table-row *ngFor="let item of (ds || []) ">
         <ui5-table-cell (click)="openLIDetail(item)">
-          <span style="line-height: 1.4rem">{{item.lineItemNumber}}</span>
+          <span style="line-height: 1.4rem">{{item.lineItemNumber}} (click me)</span>
         </ui5-table-cell>
 
         <ui5-table-cell>
@@ -198,31 +201,40 @@
 
     </section>
     <section class="form-column ">
-      <ng-container
-        *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'name', title: 'Name', readonly:true}">
-      </ng-container>
+      <div class="form-field">
+        <ng-container
+          *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'name', title: 'Name', readonly:true}">
+        </ng-container>
+      </div>
 
-      <ng-container
-        *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'price', title: 'Unit Price', readonly:true}">
-      </ng-container>
+      <div class="form-field">
+        <ng-container
+          *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'price', title: 'Unit Price', readonly:true}">
+        </ng-container>
+      </div>
+      <div class="form-field">
+        <ng-container
+          *ngTemplateOutlet="stepInput; context: {$implicit: currentLineItem, field:'quantity', title: 'Quantity'}">
+        </ng-container>
+      </div>
 
-      <ng-container
-        *ngTemplateOutlet="stepInput; context: {$implicit: currentLineItem, field:'quantity', title: 'Quantity'}">
-      </ng-container>
+      <div class="form-field">
+        <ui5-label for="supplier" >Supplier</ui5-label>
+        <ui5-label class="readonly-input" *ngIf="currentLineItem">{{currentLineItem.supplier.name}}</ui5-label>
+      </div>
 
-      <ui5-label for="supplier" required>Supplier</ui5-label>
-      <ui5-label class="readonly-input" *ngIf="currentLineItem">{{currentLineItem.supplier.name}}</ui5-label>
-
-      <ng-container
-        *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'totalNetAmount', title: 'Net Amount', readonly:true}">
-      </ng-container>
+      <div class="form-field">
+        <ng-container
+          *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'totalNetAmount', title: 'Net Amount', readonly:true}">
+        </ng-container>
+      </div>
     </section>
 
   </div>
 
   <div slot="footer" class="dialog-footer">
     <div style="flex: 1;"></div>
-    <ui5-button id="closeDialogButton" design="Emphasized" (click)="dialog.close()">Close</ui5-button>
+    <ui5-button id="closeDialogButton" design="Emphasized" (click)="closeDialog(dialog)">Close</ui5-button>
   </div>
 </ui5-dialog>
 

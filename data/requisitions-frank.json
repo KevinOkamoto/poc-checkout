@@ -1,0 +1,39 @@
+{
+  "title": "Klein, Olson and Cassin",
+  "subtitle": "Multi-channelled fault-tolerant superstructure",
+  "shippingAddress": {
+    "name": "1102 Pede St., Hungary",
+    "address": "1102 Pede St.",
+    "city": "San Fabián",
+    "zip": "1298",
+    "country": "Hungary"
+  },
+  "billingAddress": {
+    "name": "Ap #702-6595 Vulputate, Rd., Norway",
+    "address": "Ap #702-6595 Vulputate, Rd.",
+    "city": "Rae Bareli",
+    "zip": "277732",
+    "country": "Norway"
+  },
+  "supplier": {
+    "name": "Urna Et Corporation",
+    "email": "ac.sem@Fuscediam.org",
+    "orgNumber": "532406 3576"
+  },
+  "dueOn": "2021-05-12T12:00:21.922Z",
+  "currency": "USD",
+  "requestor": {
+    "name": "Philip",
+    "email": "lacus.Quisque@etrutrumnon.net",
+    "personalNumber": "16050924 5882"
+  },
+  "commodityCode": {
+    "section": "I",
+    "hscode": "030331",
+    "name": "Fish; frozen, halibut (Reinhardtius hippoglossoides, Hippoglossus hippoglossus, Hippoglossus stenolepis), excluding fillets, fish meat of 0304, and edible fish offal of subheadings 0303.91 to 0303.99",
+    "parent": "0303",
+    "level": 6
+  },
+  "deliveryType": "express"
+}
+

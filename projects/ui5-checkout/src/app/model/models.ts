@@ -5,11 +5,9 @@ export interface Requisition {
   billingAddress: Address;
   supplier: Supplier;
   dueOn: Date;
-
   currency?: string;
-  requester?: User;
+  requestor?: User;
   commodityCode?: CommodityCode;
-  lineItems: Array<LineItem>;
 }
 
 
