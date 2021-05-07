@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CheckoutModule } from './checkout-page/checkout-page.module';
 import {
+  DialogService,
   FdDatetimeModule,
   RtlService,
   ShellbarModule,
@@ -16,13 +18,15 @@ import { CheckoutService } from './checkout.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CheckoutModule,
     ShellbarModule,
     FdDatetimeModule
   ],
   providers: [
     RtlService,
-    CheckoutService
+    CheckoutService,
+    DialogService
   ],
   bootstrap: [AppComponent]
 })

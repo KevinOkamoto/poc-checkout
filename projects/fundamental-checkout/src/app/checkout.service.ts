@@ -24,7 +24,6 @@ export class CheckoutService {
         map(req => {
           const date = new Date(req.dueOn);
           req.dueOn = new FdDate(date.getFullYear(), date.getMonth() + 1, date.getDate());
-          console.log(req.dueOn)
           return req;
         })
       );
