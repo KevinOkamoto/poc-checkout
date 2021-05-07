@@ -10,6 +10,8 @@ import {
 } from '@angular/forms';
 
 import {
+  CarouselModule,
+  DialogModule,
   LayoutPanelModule,
   StepInputModule
 } from '@fundamental-ngx/core';
@@ -38,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CarouselModule,
+    DialogModule,
     FdpFormGroupModule,
     LayoutPanelModule,
     PlatformButtonModule,
