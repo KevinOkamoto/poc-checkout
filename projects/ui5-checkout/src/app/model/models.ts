@@ -23,12 +23,12 @@ export interface Address {
 
 
 export interface LineItem {
-  id: string;
+  lineItemNumber: string;
   name: string;
-  supplier: string;
-  quantity: string;
-  unitPrice: string;
-  totalPrice: string;
+  supplier: Supplier;
+  price: number;
+  quantity: number;
+  totalNetAmount: number;
 }
 
 

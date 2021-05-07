@@ -10,7 +10,18 @@ import '@ui5/webcomponents/dist/ComboBox';
 import '@ui5/webcomponents/dist/DatePicker';
 import '@ui5/webcomponents/dist/Select';
 import '@ui5/webcomponents/dist/Option';
+import '@ui5/webcomponents/dist/StepInput';
+import '@ui5/webcomponents/dist/Carousel';
 
+import '@ui5/webcomponents/dist/Table';
+import '@ui5/webcomponents/dist/TableColumn';
+import '@ui5/webcomponents/dist/TableRow';
+import '@ui5/webcomponents/dist/TableCell';
+
+import '@ui5/webcomponents/dist/Table';
+import '@ui5/webcomponents/dist/TableColumn';
+import '@ui5/webcomponents/dist/TableRow';
+import '@ui5/webcomponents/dist/TableCell';
 import '@ui5/webcomponents-fiori/dist/Page';
 import '@ui5/webcomponents-fiori/dist/Bar';
 
@@ -20,11 +31,6 @@ import '@ui5/webcomponents-icons/dist/search.js';
 
 import {HttpClientModule} from '@angular/common/http';
 
-
-import '@ui5/webcomponents/dist/Table';
-import '@ui5/webcomponents/dist/TableColumn';
-import '@ui5/webcomponents/dist/TableRow';
-import '@ui5/webcomponents/dist/TableCell';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {Address, CommodityCode, LineItem, Requisition, Supplier, User} from '../model/models';
@@ -11,12 +11,23 @@ import {Observable} from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CheckoutPageComponent implements OnInit, AfterViewInit {
+  @Input()
+  lineItemmsType: 'short' | 'long' = 'short';
+
+  @Input()
+  showFooter: boolean = false;
+
+  @ViewChild('dialog', {static: true})
+  dialog: ElementRef;
+
+
   requisition: Requisition;
   addressDB: Array<Address>;
   supplierDB: Array<Supplier>;
   userDB: Array<User>;
   commodityCodeDB: Array<CommodityCode>;
   lineItems$: Observable<LineItem[]>;
+  currentLineItem: LineItem;
 
 
   constructor(private http: HttpClient, private cd: ChangeDetectorRef) {
@@ -109,7 +120,7 @@ export class CheckoutPageComponent implements OnInit, AfterViewInit {
   }
 
   private _loadLineItems(): void {
-    this.lineItems$ = this.http.get<LineItem[]>('./assets/lineItems.json');
+    this.lineItems$ = this.http.get<LineItem[]>(`./assets/line-items-${this.lineItemmsType}.json`);
 
     //   .subscribe((items) => {
     //   items.forEach((i) => this.commodityCodeDB.push(i));
@@ -125,5 +136,10 @@ export class CheckoutPageComponent implements OnInit, AfterViewInit {
     } else if (field === 'requester') {
       this.requisition[field] = this.userDB.filter((supplier) => supplier.name === $event)[0];
     }
+  }
+
+  openLIDetail(item: LineItem): void {
+    this.currentLineItem = item;
+    (this.dialog.nativeElement as any).show();
   }
 }

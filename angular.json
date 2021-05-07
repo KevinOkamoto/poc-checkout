@@ -151,7 +151,12 @@
             "aot": true,
             "assets": [
               "projects/ui5-checkout/src/favicon.ico",
-              "projects/ui5-checkout/src/assets"
+              "projects/ui5-checkout/src/assets",
+              {
+                "glob": "*.json",
+                "input": "data/",
+                "output": "assets"
+              }
             ],
             "styles": [
               "projects/ui5-checkout/src/styles.scss"

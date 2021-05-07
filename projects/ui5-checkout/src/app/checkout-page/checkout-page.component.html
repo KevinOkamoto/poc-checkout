@@ -6,9 +6,25 @@
       <ui5-button design="Emphasized" slot="endContent">Edit</ui5-button>
     </ui5-bar>
   </div>
-  <div class="header-form">
-    <section class="form-column">
+  <ng-container *ngTemplateOutlet="headerForm">
+  </ng-container>
 
+  <ng-container *ngTemplateOutlet="lineItems; context: {$implicit: requisition, field:'lineItems',
+      title: 'Line Items', dataSource: lineItems$ | async  }">
+  </ng-container>
+
+  <div slot="footer" *ngIf="showFooter">
+    <ui5-bar design="FloatingFooter">
+      <ui5-button design="Positive" slot="endContent">Agree</ui5-button>
+      <ui5-button design="Negative" slot="endContent">Decline</ui5-button>
+      <ui5-button design="Transparent" slot="endContent">Cancel</ui5-button>
+    </ui5-bar>
+  </div>
+</ui5-page>
+
+<ng-template #headerForm>
+  <div class="input-form">
+    <section class="form-column">
       <ng-container *ngTemplateOutlet="input; context: {$implicit: requisition, field:'title', title: 'Title'}">
       </ng-container>
 
@@ -46,35 +62,24 @@
     </section>
 
   </div>
-
-  <ng-container *ngTemplateOutlet="table; context: {$implicit: requisition, field:'lineItems',
-      title: 'Line Items', dataSource: lineItems$  }">
-  </ng-container>
+</ng-template>
 
 
-  <div slot="footer">
-    <ui5-bar design="FloatingFooter">
-      <ui5-button design="Positive" slot="endContent">Agree</ui5-button>
-      <ui5-button design="Negative" slot="endContent">Decline</ui5-button>
-      <ui5-button design="Transparent" slot="endContent">Cancel</ui5-button>
-    </ui5-bar>
-  </div>
-</ui5-page>
-
-
-<ng-template #input let-entity let-field="field" let-title="title">
+<ng-template #input let-entity let-field="field" let-title="title" let-readonly="readonly">
   <ui5-label [for]="field" required>{{title}}:</ui5-label>
-  <ui5-input #input
+  <ui5-input #input *ngIf="entity && (!readonly)"
              [id]="field"
              [value]="entity[field]"
              (input)="entity[field]  = input.value"></ui5-input>
+
+  <ui5-label class="readonly-input" *ngIf="entity && readonly">{{entity[field]}}</ui5-label>
 
 </ng-template>
 
 
 <ng-template #select let-entity let-field="field" let-title="title" let-ds="dataSource">
   <ui5-label [for]="field" required>{{title}}:</ui5-label>
-  <ui5-select #select class="select" [value]="entity[field]" [id]="field"
+  <ui5-select *ngIf="entity" #select class="select" [value]="entity[field]" [id]="field"
               (change)="entity[field]  = select.selectedOption.innerText">
     <ui5-option *ngFor="let item of ds" [selected]="item === entity[field]">{{item}}</ui5-option>
   </ui5-select>
@@ -85,7 +90,7 @@
 
 <ng-template #date let-entity let-field="field" let-title="title">
   <ui5-label [for]="field">{{title}}:</ui5-label>
-  <ui5-date-picker #date [id]="field" format-pattern="dd/MM/yyyy"
+  <ui5-date-picker *ngIf="entity" #date [id]="field" format-pattern="dd/MM/yyyy"
                    [value]="entity[field] | date:'dd/MM/yyyy'"
                    (change)="entity[field]  = date.dateValue"
   ></ui5-date-picker>
@@ -93,21 +98,28 @@
 </ng-template>
 
 
-<ng-template #combobox let-entity let-field="field" let-title="title" let-ds="dataSource">
-  <ng-template [ngIf]="ds && ds.length > 0">
-    <ui5-label [for]="field" required>{{title}}:</ui5-label>
-    <ui5-combobox #combo [id]="field" filter="Contains"
-                  [value]="entity[field]?.name"
-                  (change)="onCBSelection(field, combo.value)">
-      <ui5-cb-item *ngFor="let item of ds" [text]="item.name"></ui5-cb-item>
-    </ui5-combobox>
-  </ng-template>
+<ng-template #stepInput let-entity let-field="field" let-title="title">
+  <ui5-label *ngIf="title" [for]="field">{{title}}:</ui5-label>
+  <ui5-step-input style="width: 250px;" #si *ngIf="entity" [value]="entity[field]" min="1"
+                  (change)="entity[field] = si.value">
+  </ui5-step-input>
+
 </ng-template>
 
 
-<ng-template #table let-entity let-field="field" let-title="title" let-ds="dataSource">
+<ng-template #combobox let-entity let-field="field" let-title="title" let-ds="dataSource">
+  <ui5-label [for]="field" required>{{title}}:</ui5-label>
+  <ui5-combobox *ngIf="entity" #combo [id]="field" filter="Contains"
+                [value]="entity[field]?.name"
+                (change)="onCBSelection(field, combo.value)">
+    <ui5-cb-item *ngFor="let item of (ds || [])" [text]="item.name"></ui5-cb-item>
+  </ui5-combobox>
+</ng-template>
 
-  <div class="table-wrapper">
+
+<ng-template #lineItems let-entity let-field="field" let-title="title" let-ds="dataSource">
+
+  <div class="table-wrapper" style="height: 350px; overflow: scroll;">
     <ui5-label for="lineItems" required>{{title}}:</ui5-label>
     <div class="header">
       <ui5-input id="searchInput" placeholder="Enter search criteria ..." style="width: 120px">
@@ -115,25 +127,25 @@
       </ui5-input>
     </div>
 
-    <ui5-table class="demo-table" id="table" no-data-text="No Data">
+    <ui5-table id="table" no-data-text="No Data" growing="Scroll"
+               sticky-column-header="true">
       <ui5-table-column slot="columns" style="width: 12rem">
         <span style="line-height: 1.4rem">Line #:</span>
       </ui5-table-column>
 
-      <ui5-table-column slot="columns" min-width="800" popin-text="Supplier">
+      <ui5-table-column slot="columns" min-width="300" popin-text="Supplier">
         <span style="line-height: 1.4rem">Name:</span>
       </ui5-table-column>
 
-      <ui5-table-column slot="columns" min-width="600" popin-text="Dimensions" demand-popin>
+      <ui5-table-column slot="columns" min-width="300" popin-text="Dimensions" demand-popin>
         <span style="line-height: 1.4rem">Supplier:</span>
       </ui5-table-column>
 
-      <ui5-table-column slot="columns" min-width="600" popin-text="Weight" demand-popin>
+      <ui5-table-column slot="columns" min-width="300" popin-text="Weight" demand-popin>
         <span style="line-height: 1.4rem">Unit Price:</span>
       </ui5-table-column>
-      e
       <ui5-table-column slot="columns">
-        <span style="line-height: 1.4rem">Quantity:</span>
+        <span style="line-height: 1.4rem;">Quantity:</span>
       </ui5-table-column>
 
       <ui5-table-column slot="columns">
@@ -141,32 +153,76 @@
       </ui5-table-column>
 
 
-      <ui5-table-row *ngFor="let item of ds | async">
-        <ui5-table-column slot="columns" style="width: 12rem">
-          <span style="line-height: 1.4rem">{{item.id}}</span>
-        </ui5-table-column>
+      <ui5-table-row *ngFor="let item of (ds || []) ">
+        <ui5-table-cell (click)="openLIDetail(item)">
+          <span style="line-height: 1.4rem">{{item.lineItemNumber}}</span>
+        </ui5-table-cell>
 
-        <ui5-table-column slot="columns" min-width="800" popin-text="Supplier">
+        <ui5-table-cell>
           <span style="line-height: 1.4rem">{{item.name}}</span>
-        </ui5-table-column>
+        </ui5-table-cell>
 
-        <ui5-table-column slot="columns" min-width="600" popin-text="Dimensions" demand-popin>
-          <span style="line-height: 1.4rem">{{item.supplier}}</span>
-        </ui5-table-column>
+        <ui5-table-cell>
+          <span style="line-height: 1.4rem">{{item.supplier.name}}</span>
+        </ui5-table-cell>
 
-        <ui5-table-column slot="columns" min-width="600" popin-text="Weight" demand-popin>
-          <span style="line-height: 1.4rem">{{item.unitPrice}}</span>
-        </ui5-table-column>
+        <ui5-table-cell>
+          <span style="line-height: 1.4rem">{{item.price}}</span>
+        </ui5-table-cell>
 
-        <ui5-table-column slot="columns">
-          <span style="line-height: 1.4rem">{{item.quantity}}</span>
-        </ui5-table-column>
+        <ui5-table-cell>
+          <span style="line-height: 1.4rem">
+            <ng-container *ngTemplateOutlet="stepInput; context: {$implicit: item, field:'quantity'}">a¬
+            </ng-container>
+          </span>
+        </ui5-table-cell>
 
-        <ui5-table-column slot="columns">
-          <span style="line-height: 1.4rem">{{item.totalPrice}}</span>
-        </ui5-table-column>
+        <ui5-table-cell>
+          <span style="line-height: 1.4rem">{{item.totalNetAmount}}</span>
+        </ui5-table-cell>
       </ui5-table-row>
     </ui5-table>
   </div>
 
 </ng-template>
+
+
+<ui5-dialog #dialog id="dialog" header-text="Line Item Detail" draggable resizable>
+  <div class="input-form" style="width: 700px">
+    <section class="form-column">
+      <ui5-carousel arrows-placement="Navigation" selected-index="2" cyclic style="width: 200px ">
+        <img src="https://sap.github.io/ui5-webcomponents/assets/images/sample1.jpg" alt="Landscape 1">
+        <img src="https://sap.github.io/ui5-webcomponents/assets/images/sample2.jpg" alt="Landscape 2">
+      </ui5-carousel>
+
+
+    </section>
+    <section class="form-column ">
+      <ng-container
+        *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'name', title: 'Name', readonly:true}">
+      </ng-container>
+
+      <ng-container
+        *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'price', title: 'Unit Price', readonly:true}">
+      </ng-container>
+
+      <ng-container
+        *ngTemplateOutlet="stepInput; context: {$implicit: currentLineItem, field:'quantity', title: 'Quantity'}">
+      </ng-container>
+
+      <ui5-label for="supplier" required>Supplier</ui5-label>
+      <ui5-label class="readonly-input" *ngIf="currentLineItem">{{currentLineItem.supplier.name}}</ui5-label>
+
+      <ng-container
+        *ngTemplateOutlet="input; context: {$implicit: currentLineItem, field:'totalNetAmount', title: 'Net Amount', readonly:true}">
+      </ng-container>
+    </section>
+
+  </div>
+
+  <div slot="footer" class="dialog-footer">
+    <div style="flex: 1;"></div>
+    <ui5-button id="closeDialogButton" design="Emphasized" (click)="dialog.close()">Close</ui5-button>
+  </div>
+</ui5-dialog>
+
