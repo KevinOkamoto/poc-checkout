@@ -32,7 +32,7 @@ export class CheckoutPageComponent implements OnInit, AfterViewInit {
     this._loadSuppliers();
     this._loadUsers();
     this._loadCC();
-    this._loadCC();
+    this._loadLineItems();
 
     const address: Address = {
       zip: '7221',
